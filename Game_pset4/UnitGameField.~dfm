@@ -1,0 +1,74 @@
+object FormGame: TFormGame
+  Left = 307
+  Top = 15
+  Width = 870
+  Height = 500
+  Caption = 'Game'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label: TLabel
+    Left = 259
+    Top = 88
+    Width = 13
+    Height = 21
+  end
+  object CSpinEdit: TCSpinEdit
+    Left = 384
+    Top = 88
+    Width = 49
+    Height = 22
+    MaxValue = 7
+    TabOrder = 0
+  end
+  object sgGameField: TStringGrid
+    Left = 0
+    Top = 32
+    Width = 209
+    Height = 209
+    Cursor = crCross
+    Color = clInfoBk
+    DefaultColWidth = 40
+    DefaultRowHeight = 40
+    FixedCols = 0
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ScrollBars = ssNone
+    TabOrder = 1
+    OnSelectCell = sgGameFieldSelectCell
+  end
+  object btStart: TButton
+    Left = 0
+    Top = 240
+    Width = 209
+    Height = 25
+    Caption = 'Start'
+    TabOrder = 2
+    OnClick = btStartClick
+  end
+  object editTime: TEdit
+    Left = 0
+    Top = 8
+    Width = 33
+    Height = 21
+    TabOrder = 3
+  end
+  object Timer: TTimer
+    Enabled = False
+    OnTimer = TimerTimer
+    Left = 352
+    Top = 88
+  end
+end
